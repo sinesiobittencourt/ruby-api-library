@@ -8,7 +8,7 @@
 # @package     KayakoClient
 # @copyright   Copyright (c) 2011-2013, Kayako
 # @license     FreeBSD
-# @link        http://forge.kayako.com/projects/kayako-ruby-api-library
+# @link        https://github.com/kayako/ruby-api-library
 #
 #######################################################################
 
@@ -16,7 +16,7 @@ require 'rake'
 
 Gem::Specification.new do |s|
     s.name        = 'KayakoClient'
-    s.version     = '1.1.0'
+    s.version     = '1.2.0'
     s.platform    = Gem::Platform::RUBY
     s.license     = 'FreeBSD'
 
@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
 
     s.summary     = 'Kayako official Ruby REST API library.'
     s.description = 'Kayako\'s official Ruby interface library for the REST API.'
-    s.homepage    = 'http://forge.kayako.com/projects/kayako-ruby-api-library'
+    s.homepage    = 'https://github.com/kayako/ruby-api-library'
 
     s.files       = FileList['lib/**/*.rb']
     s.test_files  = FileList['test/*.rb']

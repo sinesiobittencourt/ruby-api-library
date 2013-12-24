@@ -8,7 +8,7 @@
 # @package     KayakoClient
 # @copyright   Copyright (c) 2011-2013, Kayako
 # @license     FreeBSD
-# @link        http://forge.kayako.com/projects/kayako-ruby-api-library
+# @link        https://github.com/kayako/ruby-api-library
 #
 #######################################################################
 

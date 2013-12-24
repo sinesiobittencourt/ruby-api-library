@@ -8,7 +8,7 @@
 # @package     KayakoClient
 # @copyright   Copyright (c) 2011-2013, Kayako
 # @license     FreeBSD
-# @link        http://forge.kayako.com/projects/kayako-ruby-api-library
+# @link        https://github.com/kayako/ruby-api-library
 #
 #######################################################################
 
@@ -53,6 +53,18 @@ module KayakoClient
         TYPE_DATE          = 10
         TYPE_FILE          = 11
 
+        GROUP_USER              = 1
+        GROUP_USER_ORGANIZATION = 2
+        GROUP_STAFF_TICKET      = 3
+        GROUP_USER_TICKET       = 4
+        GROUP_TIME_TRACK        = 5
+        GROUP_STAFF_USER_TICKET = 9
+        GROUP_LIVECHAT_PRE      = 10
+        GROUP_LIVECHAT_POST     = 11
+        GROUP_KNOWLEDGEBASE     = 12
+        GROUP_NEWS              = 13
+        GROUP_TROUBLESHOOTER    = 14
+
         property :custom_field_id,       :integer
         property :field_name,            :string
         property :title,                 :string
@@ -66,6 +78,7 @@ module KayakoClient
         property :display_order,         :integer
         property :user_editable,         :boolean
         property :staff_editable,        :boolean
+        property :group_type,            :integer, :in => (1..5).to_a + (9..14).to_a
 
         def options
             if instance_variable_defined?(:@options)

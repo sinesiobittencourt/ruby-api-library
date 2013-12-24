@@ -8,7 +8,7 @@
 # @package     KayakoClient
 # @copyright   Copyright (c) 2011-2013, Kayako
 # @license     FreeBSD
-# @link        http://forge.kayako.com/projects/kayako-ruby-api-library
+# @link        https://github.com/kayako/ruby-api-library
 #
 #######################################################################
 
@@ -46,8 +46,9 @@ module KayakoClient
 
     class TicketCustomFieldGroup < KayakoClient::Tickets
 
-        property :id,       :integer, :readonly => true
-        property :title,    :string, :readonly => true
+        property :id,            :integer, :readonly => true
+        property :title,         :string,  :readonly => true
+        property :display_order, :integer, :readonly => true
 
         property :fields, [ :object ], :class => TicketCustomFieldValue, :get => :field
 
