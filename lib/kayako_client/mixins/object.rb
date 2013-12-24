@@ -348,7 +348,7 @@ module KayakoClient
         end
 
         def import(options = {})
-            if options.size == 1 && self.class.properties.size > 1
+            if options && options.size == 1 && self.class.properties.size > 1
                 values = options.values.first
                 options = values if values.is_a?(Hash)
             end
