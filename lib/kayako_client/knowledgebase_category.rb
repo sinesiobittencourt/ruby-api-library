@@ -67,5 +67,18 @@ module KayakoClient
             !parent_kb_category_id.nil? && parent_kb_category_id == 0
         end
 
+        def self.all(*args)
+            e = path + '/ListAll'
+            options = args.last.is_a?(Hash) ? args.pop : {}
+            if args.size > 0
+                if args.size <= 2
+                    e << '/' + args.collect { |arg| arg.to_i }.join('/')
+                else
+                    raise ArgumentError, "too many arguments"
+                end
+            end
+            super(options.merge(:e => e))
+        end
+
     end
 end

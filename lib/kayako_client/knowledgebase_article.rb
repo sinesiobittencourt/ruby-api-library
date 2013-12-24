@@ -100,8 +100,9 @@ module KayakoClient
         def self.all(*args)
             options = args.last.is_a?(Hash) ? args.pop : {}
             if args.size > 0
-                if args.size == 1
-                    options.merge!(:e => "#{path}/ListAll/#{args.first.to_i}")
+                if args.size <= 3
+                    e = path + '/ListAll/' + args.collect { |arg| arg.to_i }.join('/')
+                    options.merge!(:e => e)
                 else
                     raise ArgumentError, "too many arguments"
                 end

@@ -162,7 +162,7 @@ module KayakoClient
 
             components = []
             args.each_index do |index|
-                break if index > 3
+                break if index > 5
                 if args[index]
                     components[index] ||= []
                     components[index] << args[index]
@@ -179,6 +179,12 @@ module KayakoClient
                     index = 2
                 when 'userid', 'user'
                     index = 3
+                when 'count', 'limit'
+                    index = 4
+                    components[index] = []
+                when 'start', 'offset'
+                    index = 5
+                    components[index] = []
                 else
                     next
                 end
