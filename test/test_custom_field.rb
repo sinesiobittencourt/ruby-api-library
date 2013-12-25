@@ -30,7 +30,8 @@ class TestCustomField < Test::Unit::TestCase
             :encrypt_in_db   => false,
             :display_order   => 1,
             :user_editable   => false,
-            :staff_editable  => true
+            :staff_editable  => true,
+            :group_type      => 9
         )
 
         assert_equal test.custom_field_id, 1
@@ -41,6 +42,7 @@ class TestCustomField < Test::Unit::TestCase
         assert_equal test.default_value, 'Test'
         assert_equal test.regexp_validate, '/test/'
         assert_equal test.display_order, 1
+        assert_equal test.group_type, KayakoClient::CustomField::GROUP_STAFF_USER_TICKET
 
         assert test.is_required?
         assert test.staff_editable?

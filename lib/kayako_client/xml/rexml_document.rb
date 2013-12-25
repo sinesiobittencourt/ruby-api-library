@@ -20,7 +20,6 @@ module KayakoClient
         include KayakoClient::XMLBackend
 
         def initialize(document, options = {})
-            logger = options[:logger] if options[:logger]
             if (document.start_with?('<?xml '))
                 @xml = REXML::Document.new(document)
             else

@@ -53,7 +53,7 @@ class TestKnowledgebase < Test::Unit::TestCase
         assert_equal test.id, test.kb_article_id
 
         assert_raise ArgumentError do
-            KayakoClient::KnowledgebaseArticle.all(1, 2)
+            KayakoClient::KnowledgebaseArticle.all(1, 10, 0, 2)
         end
 
         assert test.in_root_category?

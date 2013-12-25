@@ -20,8 +20,9 @@ class TestTicketCustomField < Test::Unit::TestCase
     def test_ticket_custom_field_embedded
         test = KayakoClient::TicketCustomField.new(
             :group => {
-                :id     => 1,
-                :title  => 'Test',
+                :id            => 1,
+                :title         => 'Test',
+                :display_order => 2,
                 :fields => [ {
                         :id       => 1,
                         :type     => KayakoClient::CustomField::TYPE_TEXT,
@@ -88,6 +89,7 @@ class TestTicketCustomField < Test::Unit::TestCase
 
         assert_equal test.groups.first.id, 1
         assert_equal test.groups.first.title, 'Test'
+        assert_equal test.groups.first.display_order, 2
 
         assert_instance_of Array, test.groups.first.fields
         assert_instance_of KayakoClient::TicketCustomFieldValue, test.groups.first.fields.first
