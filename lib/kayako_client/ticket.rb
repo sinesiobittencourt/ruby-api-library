@@ -110,7 +110,7 @@ module KayakoClient
         property :template_group_name,  :string,  :set => :templategroup
         property :ignore_autoresponder, :boolean, :new => true
 
-        property :work_flow,            :object,   :class => TicketWorkflow
+        property :work_flow,          [ :object ], :class => TicketWorkflow
         property :watcher,            [ :object ], :class => TicketWatcher
         property :note,               [ :object ], :class => TicketNote
         property :posts,              [ :object ], :class => TicketPost
