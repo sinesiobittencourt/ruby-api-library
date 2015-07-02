@@ -6,7 +6,7 @@
 # @author      Andriy Lesyuk
 #
 # @package     KayakoClient
-# @copyright   Copyright (c) 2011-2013, Kayako
+# @copyright   Copyright (c) 2011-2015, Kayako
 # @license     FreeBSD
 # @link        https://github.com/kayako/ruby-api-library
 #
