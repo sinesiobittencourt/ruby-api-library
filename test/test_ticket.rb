@@ -89,11 +89,12 @@ class TestTicket < Test::Unit::TestCase
             }
         )
 
-        assert_instance_of KayakoClient::TicketWorkflow, test.work_flow
+        assert_instance_of Array, test.work_flow
+        assert_instance_of KayakoClient::TicketWorkflow, test.work_flow.first
         assert_instance_of Array, test.watcher
         assert_instance_of KayakoClient::TicketWatcher, test.watcher.first
 
-        assert_equal test.work_flow.title, 'Test'
+        assert_equal test.work_flow.first.title, 'Test'
         assert_equal test.watcher.first.name, 'Test'
     end
 
