@@ -6,7 +6,7 @@
 # @author      Andriy Lesyuk
 #
 # @package     KayakoClient
-# @copyright   Copyright (c) 2011-2013, Kayako
+# @copyright   Copyright (c) 2011-2015, Kayako
 # @license     FreeBSD
 # @link        https://github.com/kayako/ruby-api-library
 #
@@ -16,7 +16,7 @@ require 'rake'
 
 Gem::Specification.new do |s|
     s.name        = 'KayakoClient'
-    s.version     = '1.2.0'
+    s.version     = '1.2.1'
     s.platform    = Gem::Platform::RUBY
     s.license     = 'FreeBSD'
 
